@@ -1,0 +1,281 @@
+{
+  "serviceEndpoint": "https://www.googleapis.com/drive/v3",
+  "resources": {
+    "about": {
+      "get": {
+        "method": "GET",
+        "endpoint": "/drive/v3/about",
+        "description": "Gets information about the user, the user's Drive, and system capabilities."
+      }
+    },
+    "accessproposals": {
+      "get": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files/{fileId}/accessproposals/{proposalId}",
+        "description": "Retrieves an AccessProposal by ID."
+      },
+      "list": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files/{fileId}/accessproposals",
+        "description": "List the AccessProposals on a file."
+      },
+      "resolve": {
+        "method": "POST",
+        "endpoint": "/drive/v3/files/{fileId}/accessproposals/{proposalId}:resolve",
+        "description": "Approve or deny an Access Proposal."
+      }
+    },
+    "apps": {
+      "get": {
+        "method": "GET",
+        "endpoint": "/drive/v3/apps/{appId}",
+        "description": "Gets a specific app."
+      },
+      "list": {
+        "method": "GET",
+        "endpoint": "/drive/v3/apps",
+        "description": "Lists a user's installed apps."
+      }
+    },
+    "changes": {
+      "getStartPageToken": {
+        "method": "GET",
+        "endpoint": "/drive/v3/changes/startPageToken",
+        "description": "Gets the starting pageToken for listing future changes."
+      },
+      "list": {
+        "method": "GET",
+        "endpoint": "/drive/v3/changes",
+        "description": "Lists the changes for a user or shared drive."
+      },
+      "watch": {
+        "method": "POST",
+        "endpoint": "/drive/v3/changes/watch",
+        "description": "Subscribes to changes for a user."
+      }
+    },
+    "channels": {
+      "stop": {
+        "method": "POST",
+        "endpoint": "/drive/v3/channels/stop",
+        "description": "Stops watching resources through this channel."
+      }
+    },
+    "comments": {
+      "create": {
+        "method": "POST",
+        "endpoint": "/drive/v3/files/{fileId}/comments",
+        "description": "Creates a comment on a file."
+      },
+      "delete": {
+        "method": "DELETE",
+        "endpoint": "/drive/v3/files/{fileId}/comments/{commentId}",
+        "description": "Deletes a comment."
+      },
+      "get": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files/{fileId}/comments/{commentId}",
+        "description": "Gets a comment by ID."
+      },
+      "list": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files/{fileId}/comments",
+        "description": "Lists a file's comments."
+      },
+      "update": {
+        "method": "PATCH",
+        "endpoint": "/drive/v3/files/{fileId}/comments/{commentId}",
+        "description": "Updates a comment with patch semantics."
+      }
+    },
+    "drives": {
+      "create": {
+        "method": "POST",
+        "endpoint": "/drive/v3/drives",
+        "description": "Creates a shared drive."
+      },
+      "delete": {
+        "method": "DELETE",
+        "endpoint": "/drive/v3/drives/{driveId}",
+        "description": "Permanently deletes a shared drive."
+      },
+      "get": {
+        "method": "GET",
+        "endpoint": "/drive/v3/drives/{driveId}",
+        "description": "Gets a shared drive's metadata by ID."
+      },
+      "hide": {
+        "method": "POST",
+        "endpoint": "/drive/v3/drives/{driveId}/hide",
+        "description": "Hides a shared drive from the default view."
+      },
+      "list": {
+        "method": "GET",
+        "endpoint": "/drive/v3/drives",
+        "description": "Lists the user's shared drives."
+      },
+      "unhide": {
+        "method": "POST",
+        "endpoint": "/drive/v3/drives/{driveId}/unhide",
+        "description": "Restores a shared drive to the default view."
+      },
+      "update": {
+        "method": "PATCH",
+        "endpoint": "/drive/v3/drives/{driveId}",
+        "description": "Updates the metadata for a shared drive."
+      }
+    },
+    "files": {
+      "copy": {
+        "method": "POST",
+        "endpoint": "/drive/v3/files/{fileId}/copy",
+        "description": "Creates a copy of a file."
+      },
+      "create": {
+        "method": "POST",
+        "endpoint": "/drive/v3/files or /upload/drive/v3/files",
+        "description": "Creates a new file."
+      },
+      "delete": {
+        "method": "DELETE",
+        "endpoint": "/drive/v3/files/{fileId}",
+        "description": "Permanently deletes a file."
+      },
+      "download": {
+        "method": "POST",
+        "endpoint": "/drive/v3/files/{fileId}/download",
+        "description": "Downloads content of a file."
+      },
+      "emptyTrash": {
+        "method": "DELETE",
+        "endpoint": "/drive/v3/files/trash",
+        "description": "Permanently deletes all trashed files."
+      },
+      "export": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files/{fileId}/export",
+        "description": "Exports a Google Workspace document."
+      },
+      "generateIds": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files/generateIds",
+        "description": "Generates a set of file IDs."
+      },
+      "get": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files/{fileId}",
+        "description": "Gets a file's metadata or content."
+      },
+      "list": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files",
+        "description": "Lists the user's files."
+      },
+      "listLabels": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files/{fileId}/listLabels",
+        "description": "Lists the labels on a file."
+      },
+      "modifyLabels": {
+        "method": "POST",
+        "endpoint": "/drive/v3/files/{fileId}/modifyLabels",
+        "description": "Modifies the set of labels applied to a file."
+      },
+      "update": {
+        "method": "PATCH",
+        "endpoint": "/drive/v3/files/{fileId} or /upload/drive/v3/files/{fileId}",
+        "description": "Updates a file's metadata/content."
+      },
+      "watch": {
+        "method": "POST",
+        "endpoint": "/drive/v3/files/{fileId}/watch",
+        "description": "Subscribes to changes to a file."
+      }
+    },
+    "operations": {
+      "get": {
+        "method": "GET",
+        "endpoint": "/drive/v3/operations/{name}",
+        "description": "Gets the latest state of a long-running operation."
+      }
+    },
+    "permissions": {
+      "create": {
+        "method": "POST",
+        "endpoint": "/drive/v3/files/{fileId}/permissions",
+        "description": "Creates a permission for a file or shared drive."
+      },
+      "delete": {
+        "method": "DELETE",
+        "endpoint": "/drive/v3/files/{fileId}/permissions/{permissionId}",
+        "description": "Deletes a permission."
+      },
+      "get": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files/{fileId}/permissions/{permissionId}",
+        "description": "Gets a permission by ID."
+      },
+      "list": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files/{fileId}/permissions",
+        "description": "Lists a file's or shared drive's permissions."
+      },
+      "update": {
+        "method": "PATCH",
+        "endpoint": "/drive/v3/files/{fileId}/permissions/{permissionId}",
+        "description": "Updates a permission."
+      }
+    },
+    "replies": {
+      "create": {
+        "method": "POST",
+        "endpoint": "/drive/v3/files/{fileId}/comments/{commentId}/replies",
+        "description": "Creates a reply to a comment."
+      },
+      "delete": {
+        "method": "DELETE",
+        "endpoint": "/drive/v3/files/{fileId}/comments/{commentId}/replies/{replyId}",
+        "description": "Deletes a reply."
+      },
+      "get": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files/{fileId}/comments/{commentId}/replies/{replyId}",
+        "description": "Gets a reply by ID."
+      },
+      "list": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files/{fileId}/comments/{commentId}/replies",
+        "description": "Lists a comment's replies."
+      },
+      "update": {
+        "method": "PATCH",
+        "endpoint": "/drive/v3/files/{fileId}/comments/{commentId}/replies/{replyId}",
+        "description": "Updates a reply."
+      }
+    },
+    "revisions": {
+      "delete": {
+        "method": "DELETE",
+        "endpoint": "/drive/v3/files/{fileId}/revisions/{revisionId}",
+        "description": "Permanently deletes a file version."
+      },
+      "get": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files/{fileId}/revisions/{revisionId}",
+        "description": "Gets a revision's metadata or content."
+      },
+      "list": {
+        "method": "GET",
+        "endpoint": "/drive/v3/files/{fileId}/revisions",
+        "description": "Lists a file's revisions."
+      },
+      "update": {
+        "method": "PATCH",
+        "endpoint": "/drive/v3/files/{fileId}/revisions/{revisionId}",
+        "description": "Updates a revision."
+      }
+    }
+  },
+  "authentication": "All requests must be authenticated with OAuth 2.0.",
+  "usage": "Use Google API client libraries or make HTTP requests to the endpoints above. See the Google Drive API Reference for details."
+}
